@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Script from 'next/script'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
-import Dummy from '../components/Dummy'
+// import Dummy from '../components/Dummy'
 
 
 export default function Home() {
@@ -11,12 +11,13 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <Dummy></Dummy>
+      {/* <Dummy></Dummy> */}
     <style jsx>
     {`
       .mySpan{
         color:red
       }
+      
     `}
 
     </style>
@@ -55,10 +56,10 @@ export default function Home() {
       </nav>
       <main className={styles.main}>
         <h1 className={styles.title}>
-          <span className="mySpan dummy"> Shivam Coder Blog</span>
+          <span className="dummy"> Shivam Coder Blog</span>
        
         </h1>
-
+        <Image src="/homeimg.jpg" width={237} height={158} className='myImg'  />
         <p className={styles.description}>
           A blog for coders by a coder 
         </p>
@@ -80,18 +81,7 @@ export default function Home() {
         
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+      
     </div>
   )
 }
