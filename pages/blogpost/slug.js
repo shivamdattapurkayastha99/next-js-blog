@@ -6,7 +6,14 @@ const slug = () => {
     // console.log(slug);
   return (
       
-    <div>{slug}</div>
+    <div>
+      <h1>
+        Title of the page {slug}
+      </h1>
+      <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In atque fuga eos nihil harum fugiat. Qui, atque ipsa quaerat sed aperiam cum magnam.
+        <hr />
+      </div>
+    </div>
   )
 }
 

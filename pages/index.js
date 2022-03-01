@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Script from 'next/script'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
+import Navbar from '../components/Navbar'
 // import Dummy from '../components/Dummy'
 
 
@@ -30,31 +31,14 @@ export default function Home() {
       {/* <Script src='/sc.js' strategy="lazyOnload">
 
       </Script> */}
-      <nav className={styles.mainnav}>
-        <ul>
-          <Link href='/'>
-          <li>
-            Home
-          </li>
-          </Link>
-          <Link href='/about'>
-          <li>
-            About
-          </li>
-          </Link>
-          <Link href='/contact'>
-          <li>
-            Contact 
-          </li>
-          </Link>
-          <Link href='/blog'>
-          <li>
-            Blog 
-          </li>
-          </Link>
-        </ul>
-      </nav>
+      
       <main className={styles.main}>
+        {blogs.map((blogItem)=>{
+          <div className="blogItem">
+          <h3>{blogItem.title}</h3>
+          <p>Javascript is the language used to design logic for the web </p>
+        </div>
+        })}
         <h1 className={styles.title}>
           <span className="dummy"> Shivam Coder Blog</span>
        
@@ -65,16 +49,13 @@ export default function Home() {
         </p>
         <div className="blogs">
           <h2>Popular Blogs </h2>
+            
             <div className="blogItem">
-              <h3>How to learn javascript in 2022</h3>
+              <h3>How to learn flask</h3>
               <p>Javascript is the language used to design logic for the web </p>
             </div>
             <div className="blogItem">
-              <h3>How to learn javascript in 2022</h3>
-              <p>Javascript is the language used to design logic for the web </p>
-            </div>
-            <div className="blogItem">
-              <h3>How to learn javascript in 2022</h3>
+              <h3>How to learn nextjs</h3>
               <p>Javascript is the language used to design logic for the web </p>
             </div>
         </div>

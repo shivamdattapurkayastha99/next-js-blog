@@ -2,6 +2,21 @@ import React from 'react'
 import styles from '../styles/Blog.module.css' 
 import Link from 'next/link'
 const Blog = () => {
+  const [blogs, setblogs] = useState([])
+  useEffect(() => {
+    console.log("useeffect running");
+    fetch('http://localhost:3000/api/blogs').then((a)=>{
+      return a.json();})
+      .then((data)=>{
+        
+
+      
+      console.log(parsed);
+      setblogs(parsed)
+    
+    })
+  },[])
+  
   return (
     <div className={styles.container}>
       <main className={styles.main}>
