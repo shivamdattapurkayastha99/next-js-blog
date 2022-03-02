@@ -1,6 +1,22 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 const slug = () => {
+  useEffect(() => {
+    const {slug}=router.query
+    fetch(`http://localhost:3000/api/getblog/slug=${slug}`).then((a)=>{
+      return a.json();})
+      .then((data)=>{
+        
+
+      
+      console.log(parsed);
+      setblogs(parsed)
+    
+    })
+  
+    
+  }, [])
+  
     const router=useRouter();
     const {slug}=router.query
     // console.log(slug);
